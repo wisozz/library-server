@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  nest_library:
+    build: .
+    container_name: library-api
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+
+  postgres:
+    image: postgres:15
+    container_name: library-db
+    restart: always
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  postgres_data:

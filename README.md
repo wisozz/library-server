@@ -97,3 +97,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+ 
+## 動確手順
+1. 起動
+   - `docker-compose up -d --build`の実行
+2. APIにアクセス
+   - `localhost:3000`にアクセスする
+3. DBにアクセス
+   - compose.yaml見て接続してください
