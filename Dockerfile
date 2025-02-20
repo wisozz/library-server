@@ -1,7 +1,7 @@
 FROM node:18-alpine
 
 # 作業ディレクトリを設定
-WORKDIR /src
+WORKDIR /usr/src/app
 
 # package.json と package-lock.json をコピーして依存関係をインストール
 COPY package*.json ./

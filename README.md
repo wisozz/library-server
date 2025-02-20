@@ -105,3 +105,6 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
    - `localhost:3000`にアクセスする
 3. DBにアクセス
    - compose.yaml見て接続してください
+
+## 本番環境での起動
+`docker-compose -f docker-compose.yml up`

@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nest_library:
+    environment:
+      - NODE_ENV=development
+    command: npm run start:dev
+    ports:
+      - "9229:9229" # VS Code でデバッグ用ポート
+    volumes:
+      - .:/usr/src/app # ホストのファイルを即時反映
+      - /usr/src/app/node_modules/ # node_modules はコンテナ内で管理
